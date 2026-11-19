@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff5f8">
+<meta name="description" content="A little universe of memories, made with love for Padmapriya.">
+<title>For Padmapriya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Kaushan+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home">♡ <span>Our little universe</span></a>
+  <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav">☰ <em>Menu</em></button>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#memories">More Memories Together</a><a href="#reasons">100 reasons</a>
+    <a href="#letter">A letter</a><a href="#song">Our soundtrack</a><a href="#question">One question</a>
+  </nav>
+</header>
+<main id="home">
+<section class="band hero"><div class="wrap">
+  <div class="sparkle">✿ ♡ ✿</div><p class="eyebrow">A LITTLE UNIVERSE, JUST FOR YOU</p>
+  <h1>For my favourite person,<br><span>Padmapriya</span></h1>
+  <p class="lead">A hundred little reasons, a thousand memories, and one love story I’m grateful for every day.</p>
+  <a class="button primary" href="#memories">Open our memories ♡</a>
+  <div class="floating-hearts" aria-hidden="true">♡ ♥ ✿ ♡ ♥</div>
+</div></section>
+
+<section id="memories" class="band"><div class="wrap">
+  <p class="eyebrow">LITTLE MOMENTS, FOREVER</p><h2>More Memories Together</h2>
+  <p class="sub">Every picture holds a moment I want to keep.</p>
+
+  <form class="paper adder" id="addForm">
+    <h3>Add a new memory ♡</h3>
+    <div class="adder-row">
+      <label class="file-label" for="photoInput">＋ Choose photos<input id="photoInput" type="file" accept="image/*" multiple></label>
+      <input class="text-input" id="captionInput" type="text" maxlength="80" placeholder="Write a little caption (optional)" aria-label="Caption for the new memory">
+    </div>
+    <ul class="picked" id="picked" aria-label="Photos chosen"></ul>
+    <button class="button primary" id="addBtn" type="submit" disabled>Add to memories ♥</button>
+    <p class="hint">Photos you add are saved on this phone or browser only.</p>
+  </form>
+
+  <div class="count-row"><span id="countText"></span><button class="link-btn" id="restoreBtn" type="button" hidden></button></div>
+  <div class="gallery" id="gallery"></div>
+</div></section>
+
+<section id="reasons" class="band blush"><div class="wrap">
+  <p class="eyebrow">A HUNDRED LITTLE THINGS</p><h2>100 Reasons I Love You</h2>
+  <p class="sub">Tap the button to reveal another reason. Every one is a little reminder.</p>
+  <article class="paper reason-card">
+    <p class="eyebrow" id="reasonCount">REASON 1 OF 100</p>
+    <p class="reason" id="reasonText">Your smile can make an ordinary day feel beautiful.</p>
+    <button class="button primary" id="nextReason" type="button">Another reason ♥</button>
+    <button class="button outline" id="randomReason" type="button">Surprise me</button>
+  </article>
+</div></section>
+
+<section id="letter" class="band"><div class="wrap">
+  <p class="eyebrow">FROM MY HEART</p><h2>A Letter For You</h2>
+  <p class="sub">A few words just for you, Padmapriya</p>
+  <article class="paper letter">
+    <p>My dearest Padmapriya,</p>
+    <p>I may not always find the perfect words, but I hope you never doubt how special you are to me. You bring warmth to ordinary days and make little moments feel unforgettable.</p>
+    <p>If I could give you one thing, it would be the ability to see yourself through my eyes — then you would know just how wonderful you are.</p>
+    <p>Thank you for being you. Here's to all the memories we've made and all the beautiful ones still waiting for us.</p>
+    <p class="signature">With all my love,<br>Shriram ♡</p>
+  </article>
+</div></section>
+
+<section id="song" class="band blush"><div class="wrap">
+  <p class="eyebrow">OUR SOUNDTRACK</p><h2>A Song For Us</h2>
+  <p class="sub">Add a song that reminds you of each other</p>
+  <article class="paper song-card">
+    <div class="music-icon">♫</div><h3>Press play when you're ready</h3>
+    <label class="file-label" for="audioFile">Choose an audio file<input id="audioFile" type="file" accept="audio/*"></label>
+    <audio id="audioPlayer" controls preload="none"></audio>
+    <p class="note">Choose an audio file from your device. Only use music you have permission to share. The audio file stays on your device and is not uploaded with this page.</p>
+  </article>
+</div></section>
+
+<section id="question" class="band final-band"><div class="wrap">
+  <p class="eyebrow">ONE LAST LITTLE SURPRISE</p><h2>Just one question...</h2>
+  <article class="question-card">
+    <div class="big-heart">💗</div>
+    <p class="question">Padmapriya, will you keep making beautiful memories with me?</p>
+    <div class="actions"><button class="button primary" id="yesBtn" type="button">Yes, always! ♡</button><button class="button outline" id="againBtn" type="button">Tell me again</button></div>
+    <p class="response" id="response" aria-live="polite"></p>
+  </article>
+</div></section>
+</main>
+<footer><div class="footer-heart">♡</div><p>Made with love, just for Padmapriya.</p><strong>Shriram &amp; Padmapriya</strong><small>A little universe. A million memories. One love.</small></footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>

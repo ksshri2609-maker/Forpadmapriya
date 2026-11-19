@@ -227,4 +227,3 @@ document.getElementById('yesBtn').addEventListener('click',()=>{response.textCon
 document.getElementById('againBtn').addEventListener('click',()=>{response.textContent="Padmapriya, will you keep making beautiful memories with me? ♡"});
 
 render();
-loadState().then(render);
